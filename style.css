@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F3FF;
+    color: #222222;
+}
+
+.navbar {
+    background-color: #7C3AED;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.form-card {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #7C3AED;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #7C3AED;
+    border-color: #7C3AED;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6D28D9;
+}
+
+
+
+
+
+
+
+/* Bootstrap button color */
+.btn-primary {
+    background-color: #7C3AED;
+    border-color: #7C3AED;
+}
+
+.btn-primary:hover {
+    background-color: #6D28D9;
+    border-color: #6D28D9;
+}
+
+.btn-primary:focus {
+    background-color: #6D28D9;
+    border-color: #6D28D9;
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+}
+
+
+
+
+.btn-primary {
+    background-color: #7C3AED;
+    border-color: #7C3AED;
+}
+
+.btn-primary:hover {
+    background-color: #6D28D9;
+    border-color: #6D28D9;
+}
+
+
+
+
+
+
+
+
+.btn-primary {
+    background-color: #7C3AED;
+    border-color: #7C3AED;
+}
+
+.btn-primary:hover {
+    background-color: #6D28D9;
+    border-color: #6D28D9;
+}
+
+.btn-outline-secondary {
+    color: #7C3AED;
+    border-color: #7C3AED;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #7C3AED;
+    border-color: #7C3AED;
+    color: white;
+}

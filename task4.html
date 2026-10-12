@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Registration Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>FormProject</h2>
+
+        <div>
+            <a href="index.html">Task 0</a>
+            <a href="task1.html">Task 1</a>
+            <a href="task2.html">Task 2</a>
+            <a href="task3.html">Task 3</a>
+            <a href="task4.html">Task 4</a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="form-card mx-auto">
+            <h1>Registration Form</h1>
+            <p class="description">
+                Create your account by filling in the form.
+            </p>
+
+            <form id="registrationForm" novalidate>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label">
+                            First Name
+                        </label>
+                        <input type="text" class="form-control"
+                               id="firstName" required maxlength="50">
+                        <div class="invalid-feedback">
+                            First name is required.
+                        </div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label">
+                            Last Name
+                        </label>
+                        <input type="text" class="form-control"
+                               id="lastName" required maxlength="50">
+                        <div class="invalid-feedback">
+                            Last name is required.
+                        </div>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control"
+                           id="email" placeholder="name@example.com"
+                           required>
+                    <div class="invalid-feedback">
+                        Enter a valid email address.
+                    </div>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control"
+                           id="password" minlength="8" required>
+                    <div class="invalid-feedback">
+                        Password must have at least 8 characters.
+                    </div>
+                    <div class="valid-feedback">Password is valid!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">
+                        Confirm Password
+                    </label>
+                    <input type="password" class="form-control"
+                           id="confirmPassword" required>
+                    <div class="invalid-feedback">
+                        Passwords do not match.
+                    </div>
+                    <div class="valid-feedback">
+                        Passwords match!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Gender</label>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"
+                               name="gender" id="male"
+                               value="Male" required>
+                        <label class="form-check-label" for="male">
+                            Male
+                        </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"
+                               name="gender" id="female"
+                               value="Female" required>
+                        <label class="form-check-label" for="female">
+                            Female
+                        </label>
+                    </div>
+
+                    <div id="genderError" class="text-danger small"
+                         style="display: none;">
+                        Please select your gender.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Hobbies</label>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                               id="sports" name="hobbies" value="Sports">
+                        <label class="form-check-label" for="sports">
+                            Sports
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                               id="music" name="hobbies" value="Music">
+                        <label class="form-check-label" for="music">
+                            Music
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox"
+                               id="programming" name="hobbies"
+                               value="Programming">
+                        <label class="form-check-label" for="programming">
+                            Programming
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required>
+                        <option value="">Choose your country</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select your country.
+                    </div>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div id="successMessage"
+                     class="alert alert-success"
+                     style="display: none;">
+                    Registration form completed successfully!
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Register
+                        </button>
+                    </div>
+
+                    <div class="col-6">
+                        <button type="reset"
+                                class="btn btn-outline-secondary w-100">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById("registrationForm");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        const genderError = document.getElementById("genderError");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            confirmPassword.setCustomValidity("");
+
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+            }
+
+            const fields = form.querySelectorAll(
+                "input:not([type='radio']):not([type='checkbox']), select"
+            );
+
+            fields.forEach(function(field) {
+                field.classList.remove("is-valid", "is-invalid");
+
+                if (field.checkValidity()) {
+                    field.classList.add("is-valid");
+                } else {
+                    field.classList.add("is-invalid");
+                }
+            });
+
+            const genderSelected =
+                document.querySelector("input[name='gender']:checked");
+
+            genderError.style.display = genderSelected ? "none" : "block";
+
+            if (form.checkValidity()) {
+                successMessage.style.display = "block";
+            } else {
+                successMessage.style.display = "none";
+            }
+        });
+
+        confirmPassword.addEventListener("input", function() {
+            confirmPassword.setCustomValidity("");
+        });
+
+        form.addEventListener("reset", function() {
+            setTimeout(function() {
+                form.querySelectorAll(".is-valid, .is-invalid")
+                    .forEach(function(field) {
+                        field.classList.remove("is-valid", "is-invalid");
+                    });
+
+                genderError.style.display = "none";
+                successMessage.style.display = "none";
+            }, 0);
+        });
+    </script>
+
+</body>
+</html>
